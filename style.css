@@ -20,9 +20,47 @@
     background: url(img/rack.png);
     background-repeat: no-repeat;
     background-position: center;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+.bomb {
+    width: 6rem;
+    height: 7rem;
+    background: url(img/bomb.webp);
+    background-size: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 6.8rem;
+}
+
+.oil {
+    border: .1rem solid black;
+    width: 6rem;
+    height: 8.8rem;
+    background: url(img/oil.webp);
+    background-size: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rope {
+    border: .1rem solid black;
+    width: 5rem;
+    height: 5rem;
+    background: url(img/rope.webp);
+    background-size: cover;
+}
+
+.mask {
+    border: .1rem solid black;
+    width: 5rem;
+    height: 5rem;
+    background: url(img/mask.webp);
+    background-size: cover;
+}
 .right {
     grid-area: right;
     border: .1rem solid black;
