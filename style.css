@@ -1,0 +1,32 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: url(img/background.webp);
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    'head head'
+    'left right';
+}
+
+.head {
+    grid-area: head;
+    border: .1rem solid black;
+}
+
+.left {
+    grid-area: left;
+    border: .1rem solid black;
+    background: url(img/rack.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.right {
+    grid-area: right;
+    border: .1rem solid black;
+    background: url(img/morshu_gif.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+}
