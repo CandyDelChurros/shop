@@ -1,3 +1,7 @@
+* {
+    font-family:'FOT-Chiaro Std';
+    color: #fff;
+}
 body{
     width: 100vw;
     height: 100vh;
@@ -18,7 +22,6 @@ body{
 
 .head {
     grid-area: head;
-    border: .1rem solid black;
 }
 
 .left {
@@ -75,15 +78,96 @@ body{
 }
 .mid {
     grid-area: middle;
-    border: .1rem solid black;
+    
+    
 }
+.carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 22.7rem;
+}
+.produto {
+    background: blue;
+    width: 25rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.img {
+    width: 2rem;
+    height: 2rem;
+    background: url(img/bomb.webp);
+    background-size: cover;
+}
+
+.detalhes {
+    display: flex;
+    gap: 1rem;
+}
+.rupee {
+    width: 1.2rem;
+    height: 1.4rem;
+    background: url(img/rupee.webp);
+    background-size: cover;
+}
+
+.carrinho button {
+    border-radius: 3rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    background: #ad3838;
+}
+
+.comprar {
+    margin-top: 2rem;
+    justify-self: end;
+    background: blue;
+    width: 25rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.comprar button {
+    border-radius: 3rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.08rem;
+    background: #ad389d;
+
+}
+.comprar button:nth-child(5) {
+    font-size: .9rem;
+    background: #ad7a38;
+}
+.comprar button:nth-child(6) {
+    font-size: .9rem;
+    background: #38ad6d;
+}
+
+
 .right {
     grid-area: right;
     display:flex;
+    border-top: .3rem solid black;
+    border-left: .3rem solid black;
+    border-right: .3rem solid black;
 }
 
 .dealer {
-    border: .1rem solid black;
     background: url(img/morshu_gif.webp);
     background-repeat: no-repeat;
     background-position-y:12rem ;
@@ -94,7 +178,6 @@ body{
 }
 
 .dealer-wait {
-    border: .1rem solid black;
     position: absolute;
     background: url(img/Morshu.webp);
     background-repeat: no-repeat;
@@ -103,4 +186,28 @@ body{
     background-size: 12.6rem;
     height: 22.8rem;
     width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dealer-wait button {
+    margin-top: 1rem;
+    border-radius: 3rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    background: #3839AD;
+}
+.dealer-wait .help button {
+    font-size: 1.4rem;
+    background: #5BD85F;
+}
+
+.text {
+    grid-area: text;
+    border: .5rem solid black;
 }
