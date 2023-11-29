@@ -1,3 +1,7 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
 .container{
     width: 100vw;
     height: 100vh;
@@ -5,8 +9,11 @@
     background-size: cover;
     display: grid;
     grid-template-areas: 
-    'head head'
-    'left right';
+    'head head head'
+    'left middle right'
+    'text text text';
+    grid-template-columns: 30rem 30rem 1fr;
+    grid-template-rows: 8rem 1fr 10rem;
 }
 
 .head {
@@ -16,28 +23,32 @@
 
 .left {
     grid-area: left;
-    border: .1rem solid black;
     background: url(img/rack.png);
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
+    background-size: 30rem;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    grid-template-areas: 
+    'bomb oil'
+    'rope mask';
+    grid-template-columns: 9rem;
+    grid-template-rows: 10rem;
 }
 
 .bomb {
+    grid-area: bomb;
     width: 6rem;
-    height: 7rem;
+    height: 8.8rem;
     background: url(img/bomb.webp);
     background-size: 5rem;
-    background-position: center;
+    background-position-y: 2rem;
+    background-position-x: 1rem;
     background-repeat: no-repeat;
-    margin-bottom: 6.8rem;
 }
 
 .oil {
-    border: .1rem solid black;
+    grid-area: oil;
     width: 6rem;
     height: 8.8rem;
     background: url(img/oil.webp);
@@ -47,24 +58,49 @@
 }
 
 .rope {
-    border: .1rem solid black;
+    grid-area: rope;
     width: 5rem;
-    height: 5rem;
+    height: 8rem;
     background: url(img/rope.webp);
-    background-size: cover;
+    background-size: 5.2rem;
 }
 
 .mask {
-    border: .1rem solid black;
+    grid-area: mask;
     width: 5rem;
     height: 5rem;
     background: url(img/mask.webp);
-    background-size: cover;
+    background-size: 5.5rem;
+    background-repeat: no-repeat;
+}
+.mid {
+    grid-area: middle;
+    border: .1rem solid black;
 }
 .right {
     grid-area: right;
+    display:flex;
+}
+
+.dealer {
     border: .1rem solid black;
     background: url(img/morshu_gif.webp);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-y:12rem ;
+    background-size: 18.5rem;
+    height: 22.8rem;
+    width: 20rem;
+    visibility: hidden;
+}
+
+.dealer-wait {
+    border: .1rem solid black;
+    position: absolute;
+    background: url(img/Morshu.webp);
+    background-repeat: no-repeat;
+    background-position-y:12rem ;
+    background-position-x:3.3rem;
+    background-size: 12.6rem;
+    height: 22.8rem;
+    width: 20rem;
 }
